@@ -14,13 +14,12 @@ body{
 
 .inf{
     width: 50%;
-    height: 94%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 ;
     backdrop-filter: blur(100vw);
 }
 
@@ -110,10 +109,11 @@ body{
     align-items: center;
 }
 
-.inf .content .text p ,span{
-    font-size: 22px;
+.inf .content .text a{
+    font-size: 19px;
     font-weight: bold;
     text-transform: capitalize;
+    margin-bottom: 10px;
 }
 
 .logo{
