@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+body{
+    background-image: linear-gradient(to right, #001, #00115555, #001);
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inf{
+    width: 50%;
+    height: 94%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    backdrop-filter: blur(100vw);
+}
+
+.inf form{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.inf form label{
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.inf form input{
+    width: 70%;
+    min-width: 100px;
+    margin: 10px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    color: #000;
+    text-align: center;
+}
+
+.inf form button{
+    padding: 3px 10px;
+    width: 60%;
+    border-radius: 10px;
+    color: #000;
+    margin: 10px 0;
+    scale: 0.95;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.inf form button:hover{
+    scale: 1.05;
+}
+
+.content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .icon{
+    display: flex;
+    flex-direction: column;
+}
+
+.content .icon i{
+    background-color: #ffd700;
+    margin: 10px 0;
+    padding: 7px 60px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+.content .icon i:hover{
+    scale: calc(1.1);
+}
+
+#face{
+    background-color: #226ac3;
+}
+#goo{
+    background-color: #bc3737;
+}
+
+#face:hover,#goo:hover{
+    translate: -10px -10px -10px ;
+    box-shadow: 4px 4px 5px 3px #ffffff8b;
+}
+
+.inf .text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inf .content .text p ,span{
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.logo{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 300px;
+}
+
+.logo i{
+    color: #ffd700;
+}
+
+@media (max-width: 830px){
+    body{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .logo{
+        font-size: 120px;
+    }
+
+    .inf .text{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .inf form button{
+        min-width: 100px;
+    }
+
+    .icon{
+        padding: 7px 40px;
+    }
+}

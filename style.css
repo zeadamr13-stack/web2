@@ -1,0 +1,688 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(to right, #001, #00115555, #001);
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  position: fixed;
+  backdrop-filter: blur(15px);
+  z-index: 999;
+}
+
+header a {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.7s;
+  color: #fff;
+}
+
+header a h2:hover {
+  scale: 1.05;
+  color: #ffffff42;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #fff;
+  gap: 15px;
+}
+
+header ul li {
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+  word-break: break-all;
+  padding: 0 3px;
+}
+
+header ul li:hover,
+.active {
+  border-bottom: 2px solid #fff;
+}
+
+.sec-logo {
+  color: #ffd700;
+  font-size: 40px;
+}
+
+.toggle-but {
+  color: #fff;
+  display: none;
+  cursor: pointer;
+}
+
+.toggle-but i {
+  font-size: 1.4em;
+}
+
+.drowpdown-menu {
+  display: none;
+  position: absolute;
+  right: 2em;
+  top: 90px;
+  width: 300px;
+  height: 0;
+  background-color: #ffffff55;
+  backdrop-filter: blur(100px);
+  overflow: hidden;
+  border-radius: 10px;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.drowpdown-menu.open {
+  height: 300px;
+}
+
+.drowpdown-menu li {
+  padding: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drowpdown-menu nav li {
+  border-bottom: none;
+}
+
+.drowpdown-menu .cotton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  color: #ffd700;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+section {
+  width: 100%;
+  height: fit-content;
+  padding-top: 30px;
+}
+
+.brand {
+  width: 100%;
+  height: fit-content;
+  padding: 30px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.space {
+  width: 100%;
+  height: 70px;
+}
+
+.brand h2 {
+  text-align: center;
+  font-size: 4.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-break: break-all;
+}
+
+.brand h2 span {
+  color: gold;
+  font-size: 1.4em;
+}
+
+.brand p {
+  text-align: center;
+  font-size: 1.2em;
+  word-break: break-all;
+}
+.brand .but {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.but button {
+  padding: 4px;
+  width: 30%;
+  border-radius: 20px;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.logobrand {
+  width: 100%;
+  height: fit-content;
+  padding: 30px;
+  color: #fff;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.logobrand i {
+  font-size: 15vw;
+}
+
+.logobrand h2 {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  color: #ffd700;
+  word-break: break-all;
+}
+
+.acc {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.tit {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  padding: 2px;
+  color: #fff;
+}
+
+.tit h2 {
+  margin-bottom: 5px;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-break: break-all;
+  color: #ffd700;
+}
+
+.tit p {
+  font-size: 23px;
+  font-weight: bold;
+  text-transform: capitalize;
+  word-break: break-all;
+}
+
+.cards {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 15px;
+  padding: 10px 15vw 30px 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  color: #fff;
+  width: 300px;
+  min-width: 185px;
+  overflow: hidden;
+  box-shadow: -1px -1px 9px 2px #ffd90059;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.card:hover {
+  scale: calc(1.1);
+}
+
+.card .image img {
+  width: 100%;
+}
+
+#imageviwer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.card h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffd700;
+  padding-bottom: 6px;
+}
+
+.card .con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+}
+
+.card .con p {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.card .con span {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-decoration: line-through;
+  color: #a00;
+}
+
+.card p:last-child {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_content {
+  width: 80%;
+  height: 80%;
+  background-color: #ffffff11;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.tit_con {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+}
+
+.tit_con a {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffd700;
+}
+
+.zatch_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zatch_con {
+  margin: 15px;
+  color: #fff;
+  width: 50%;
+  padding: 30px;
+  word-break: break-all;
+}
+
+.zatch_con h2 {
+  padding-bottom: 30px;
+  font-size: 45px;
+  text-transform: capitalize;
+}
+
+.zatch_con span {
+  color: #ffd700;
+  font-size: 65px;
+}
+
+.zatch_con p {
+  padding: 5px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.zatch_img {
+  width: 40%;
+  align-items: center;
+}
+
+.zatch_img img {
+  width: 400px;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 70px;
+    color: #fff;
+}
+
+.card-list{
+    width: 400px;
+    min-width: 200px;
+    min-width: unset;
+    height: fit-content;
+    border-radius: 30px;
+    border-bottom: #fff 1px solid;
+    transition: 0.5s;
+}
+
+.card-list:hover{
+    scale: calc(1.1);
+}
+
+.card-list .image{
+    width: 100%;
+
+}
+
+.list .card-list .image img{
+    width: 100%;
+}
+
+.card-list h2{
+    padding: 10px;
+    text-align: center;
+    font-size: 29px;
+    text-transform: uppercase;
+    color: #ffd700;
+    letter-spacing: 1px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.text{
+    width: 65%;
+    padding: 10px;
+    word-break: break-all;
+}
+
+.text p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.text p span{
+    font-size: 22px;
+    color: #ffd700;
+}
+
+.media{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.media i{
+    font-size: 18px;
+    padding: 20px 80px;
+    margin: 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+#face{
+    background-color: #2b79b1;
+    color: #fff;
+}
+
+#insta{
+    background-color: #a51b57;
+    color: #fff;
+}
+
+#what{
+    background-color: #2bb151;
+    color: #fff;
+}
+
+#face:hover,#insta:hover,#what:hover{
+    translate: calc(20px);
+    box-shadow: 1px 1px 8px 2px #ffffff7e;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+    backdrop-filter: blur(100px);
+}
+
+.contact .services{
+    width: 31%;
+}
+
+.contact .services ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .services ul li{
+    padding: 10px 0;
+}
+
+.contact .services ul li a{
+    color: #ffd700;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: transparent solid 2px;
+    text-transform: capitalize;
+    transition: 0.4s;
+}
+
+.contact .services ul li a:hover{
+    border-bottom: #ffd700 solid 2px;
+}
+
+.contact .media{
+    width: 31%;
+} 
+
+.contact .call{
+    width: 31%;
+}
+
+.contact legend{
+    color: #ffd700;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.contact .call form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact .call form input{
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+}
+
+#massage{
+    padding: 4px;
+    width: 50%;
+    min-width: 120px;
+}
+
+.contact .call form input[type="email"]{
+    width: 60%;
+    padding: 3px;
+    min-width: 120px;
+}
+
+#tex{
+    padding: 35px;
+    width: 100%;
+    min-width: 120px;
+}
+
+.contact .call form button[type="submit"]{
+    padding: 4px;
+    width: 30%;
+    border-radius: 20px;
+    min-width: 120px;
+}
+
+
+
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 920px) and (max-width: 1200px) {
+  .zatch_container .zatch_img img {
+    width: 320px;
+  }
+
+  .list{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 920px) {
+  .zatch_container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .list{
+    justify-content: center;
+  }
+
+  .zatch_container .zatch_con{
+    width: 80%;
+  }
+
+   .zatch_container .zatch_img{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+   }
+}
+
+@media (min-width: 577px) and (max-width: 1200px) {
+  .toggle-but {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  header ul,
+  .sec-logo {
+    display: none;
+  }
+
+  .toggle-but {
+    display: block;
+  }
+
+  header a > h2:first-child {
+    word-break: break-all;
+  }
+
+  .drowpdown-menu {
+    display: block;
+  }
+
+  .drowpdown-menu {
+    width: unset;
+    left: 2em;
+  }
+
+  .zatch_con h2 {
+    font-size: 24px;
+  }
+
+  .zatch_con span {
+    font-size: 34px;
+  }
+
+  .zatch_container .zatch_img img {
+    width: 120px;
+  }
+
+  .about{
+    flex-direction: column;
+  }
+
+  .text,.media{
+    width: 100%;
+  }
+
+  .media i{
+    padding: 20px 50px;
+  }
+
+  .contact{
+    flex-direction: column;
+  }
+
+  .contact .media i{
+    padding: 20px 50px;
+  }
+
+  .contact> .media,.call,.services{
+    width: 100%;
+  }
+}
