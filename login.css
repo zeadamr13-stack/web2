@@ -153,4 +153,8 @@ body{
     .icon{
         padding: 7px 40px;
     }
+
+    .inf{
+        border-radius: none;
+    }
 }
