@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+<div class="inf">
+    <form id="signupForm">
+    <label>sign up</label>
+  <input type="email" id="email" placeholder="Enter username">
+  <input type="password" id="password" placeholder="Enter password">
+  <input type="text" id="mobile" placeholder="Enter phone number" />
+  <button type="submit">creat account</button>
+</form>
+</div>
+
+<div class="logo">
+        <i class="fa-brands fa-cotton-bureau"></i>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const signupForm = document.getElementById('signupForm');
+  const emailInput = document.getElementById('email');
+  const passwordInput = document.getElementById('password');
+
+  signupForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // يمنع الريفريش
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    // التحقق من الحقول الفاضية
+    if (email === '' || password === '') {
+      alert('الرجاء إدخال الايميل وكلمة المرور'); 
+      return;
+    }
+
+    // حفظ البيانات بعد التأكد أن الحقول مش فاضية
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
+
+    alert('تم إنشاء الحساب بنجاح');
+
+    // تحويل المستخدم مباشرة لصفحة تسجيل الدخول
+    window.location.href = 'index.html'; // هنا مفيش أي تغيير، يبقى يبقى login.html
+  });
+});
+</script>
+</body>
+</html>

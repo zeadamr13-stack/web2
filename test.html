@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #products-container {
+  display: flex;
+  flex-wrap: wrap; /* لو عايز المنتجات تبقى جنب بعض وتتنقل للسطر الجديد */
+  gap: 20px;       /* مسافة بين المنتجات */
+  max-height: 400px; /* الحد الأقصى للقائمة */
+  overflow-y: auto;  /* السكول الرأسي */
+  border: 1px solid #ccc; /* بس للتوضيح */
+  padding: 10px;
+}
+
+.product {
+  width: 150px;
+  border: 1px solid #aaa;
+  padding: 10px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <div id="products-container"></div>
+    <script>
+// 1. البيانات: كل منتج بالصورة والسعر
+const products = [
+  { img: 'product1.jpg', price: 100 },
+  { img: 'product1.jpg', price: 150 },
+  { img: 'product1.jpg', price: 200 },
+  { img: 'product1.jpg', price: 300 }
+  // ممكن تضيف أي عدد من المنتجات
+];
+
+// 2. نجيب الـ container
+const container = document.getElementById('products-container');
+
+// 3. نكرر المنتجات
+products.forEach(product => {
+  const div = document.createElement('div'); // div لكل منتج
+  div.className = 'product';                 // نديها نفس التنسيق
+  div.innerHTML = `
+    <img src="${product.img}" alt="Product">
+    <p>السعر: ${product.price} جنيه</p>
+  `;
+  container.appendChild(div); // نضيفها للـ container
+});
+</script>
+</body>
+</html>

@@ -7,6 +7,7 @@
 body{
     background-image: linear-gradient(to right, #001, #00115555, #001);
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,6 +20,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 0 ;;
     background-image: linear-gradient(to right, #001, #00115555, #001);
 }
 
@@ -71,50 +73,6 @@ body{
     justify-content: center;
 }
 
-.content .icon{
-    display: flex;
-    flex-direction: column;
-}
-
-.content .icon i{
-    background-color: #ffd700;
-    margin: 10px 0;
-    padding: 7px 60px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.9s;
-}
-
-.content .icon i:hover{
-    scale: calc(1.1);
-}
-
-#face{
-    background-color: #226ac3;
-}
-#goo{
-    background-color: #bc3737;
-}
-
-#face:hover,#goo:hover{
-    translate: -10px -10px -10px ;
-    box-shadow: 4px 4px 5px 3px #ffffff8b;
-}
-
-.inf .text{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-}
-
-.inf .content .text a{
-    font-size: 19px;
-    font-weight: bold;
-    text-transform: capitalize;
-    margin-bottom: 10px;
-}
 
 .logo{
     width: 50%;
@@ -137,41 +95,16 @@ body{
     }
 
     .logo{
-        font-size: 150px;
+        font-size: 120px;
         width: 100%;
     }
 
-    .inf .text{
-        flex-direction: column-reverse;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .inf .content .text a{
-        font-size: 16px;
-    }
-
-    .inf form button{
-        min-width: 100px;
-    }
-
-    .content .icon i{
+    .icon{
         padding: 7px 40px;
     }
 
     .inf{
         border-radius: 0;
         width: 100%;
-    }
-}
-
-@media (max-width: 240px){
-    .logo{
-        font-size: 90px;
-        width: 100%;
-    }
-
-    .inf .content .text a{
-        font-size: 10px;
     }
 }

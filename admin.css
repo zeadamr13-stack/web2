@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right, #001, #00115555, #001);
+}
+
+nav{
+    width: 100%;
+    background-color: #001;
+    box-sizing: border-box;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+nav ul li{
+    font-size: 20px;
+    font-weight: bold;
+    border: #fff solid 1px;
+    padding: 7px 70px;
+    border-radius: 20px;
+    transition: 0.6s;
+    scale: 1.05;
+}
+
+nav ul a{
+    border-radius: 20px;
+}
+
+nav ul li:hover{
+    
+    background-color: #ffffff23;
+}
+
+nav ul li:active{
+    scale: 0.95;
+}
+
+.user.use{
+    display: flex;
+}
+
+.password.pass{
+    display: flex;
+}
+
+.user,.password,.sell,.buy,.prodect,.order{
+    
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(30px);
+    background-color: #00001183;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.user form{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.user form input,button{
+    color: #001;
+    padding: 7px 30px;
+    border-radius: 20px;
+    margin: 10px;
+}
